@@ -8,21 +8,19 @@ function karatsubaFn(x, y) {
     let xLength = getExpLength(x),
         yLength = getExpLength(y);
 
-    console.log('x: ',x,', y: ', y);
-
     if (xLength == 1 || yLength == 1) {
         return x * y;
     }
 
     let maxLength = Math.max(xLength, yLength),
-        n = Math.round(maxLength / 2);
+        n = Math.round(maxLength / 2),
 
-    let a = Math.floor(x / base ** n),
+        a = Math.floor(x / base ** n),
         b = x % (base ** n),
         c = Math.floor(y / base ** n),
-        d = y % (base ** n);
+        d = y % (base ** n),
 
-    let ac = karatsubaFn(a,c),
+        ac = karatsubaFn(a,c),
         bd = karatsubaFn(b,d),
         adbc = karatsubaFn(a+b,c+d) - ac - bd;
    
