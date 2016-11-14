@@ -1,10 +1,16 @@
 function karatsubaFn(x, y) {
+    if (isNaN(x) || isNaN(y)) {
+        return 'Invalid input';
+    }
+
     const base = 10;
 
     let xLength = getExpLength(x),
         yLength = getExpLength(y);
 
-    if (xLength <= 4 && yLength <= 4) {
+    console.log('x: ',x,', y: ', y);
+
+    if (xLength == 1 || yLength == 1) {
         return x * y;
     }
 
@@ -19,8 +25,8 @@ function karatsubaFn(x, y) {
     let ac = karatsubaFn(a,c),
         bd = karatsubaFn(b,d),
         adbc = karatsubaFn(a+b,c+d) - ac - bd;
-    
-    return ac * (base**(n*2)) + adbc * (base ** n) + bd; 
+   
+    return ac*(base**(n*2)) + adbc*(base**n) + bd; 
 }
 
 function getExpLength (x) {

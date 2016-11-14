@@ -60,8 +60,10 @@ let referenceResults = [{
 suite('Krtsb multiplication tests', function() {
 
     test('karatsubaFn should return multiplication result of two numbers', function() {
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < referenceResults.length; i++) {
+            console.log('DIFF:', referenceResults[i].result - karatsubaFn(referenceResults[i].x, referenceResults[i].y) )
             assert.equal(karatsubaFn(referenceResults[i].x, referenceResults[i].y),referenceResults[i].result);
+
         }
     });
 
