@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body>
+    <div>
+        <p>Welcome to Karatsuba multiplication</p>
+    </div>
+    <div><p>Let's run some tests first</p></div>
+    <div id="mocha"></div>
+
+    <script src="http://chaijs.com/chai.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.1.2/mocha.min.js" type="text/javascript"></script>
+    
+    <script src="krtsb.js" type="text/javascript"></script>
+    <script>mocha.setup('tdd')</script>
+    <script src="tests.js" type="text/javascript"></script>
+
+    <script>
+        mocha.run();
+    </script>
+</body>
+</html>
