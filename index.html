@@ -3,7 +3,7 @@
 <head></head>
 <body>
     <div>
-        <p>Welcome to Karatsuba multiplication</p>
+        <p>Karatsuba multiplication</p>
     </div>
     <div><p>Let's run some tests first</p></div>
     <div id="mocha"></div>
@@ -18,18 +18,16 @@
 
     <script src="http://chaijs.com/chai.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.1.2/mocha.min.js" type="text/javascript"></script>
-    
+
+    <script src="biginteger.js" type="text/javascript"></script>
     <script src="krtsb.js" type="text/javascript"></script>
     <script>mocha.setup('tdd')</script>
     <script src="tests.js" type="text/javascript"></script>
-
-    <script>
-        mocha.run();
-    </script>
-
     <script>
         window.onload = function() {
-            let button = document.getElementById("mbutton");
+            mocha.run();
+
+            var button = document.getElementById("mbutton");
 
             function calculate() {
                 console.log('calculating');
