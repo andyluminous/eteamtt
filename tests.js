@@ -59,7 +59,13 @@ let referenceResults = [{
 
 suite('Krtsb multiplication tests', function() {
 
-    test('karatsubaFn should return multiplication result of two numbers', function() {
+    test('karatsubaFn should return \'Invalid input\' message when input is not numbers', function() {
+        assert.equal(karatsubaFn('1234567','abc'),'Invalid input');
+        assert.equal(karatsubaFn('1234567',''),'Invalid input');
+        assert.equal(karatsubaFn('1234567',undefined),'Invalid input');
+    });
+
+    test('karatsubaFn should return multiplication result of two numbers ', function() {
         for (let i = 0; i < referenceResults.length; i++) {
             assert.equal(karatsubaFn(referenceResults[i].x, referenceResults[i].y),referenceResults[i].result);
         }
