@@ -29,11 +29,10 @@
 
             var button = document.getElementById("mbutton");
 
-            function calculate() {
-                console.log('calculating');
+            function calculate() {                
                 let x = document.getElementById("num1").value;
                 let y = document.getElementById("num2").value;
-                let result = karatsubaFn(+x,+y);
+                let result = karatsubaFn(x,y);
                 document.getElementById('result').innerHTML = result;
             }
 
